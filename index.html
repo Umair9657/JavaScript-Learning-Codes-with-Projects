@@ -3,50 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM MANIPULATION</title>
+    <title>Unlimited Colours with stop and start</title>
 </head>
-<body style="background-color: black; color: beige;">
-    <ul class="language">
-        <li>Javascript</li>
-        <li>Java</li>     
-        <li>Python</li>
-        <li>GO</li>
-    </ul>
+<body>
+    <h1> It is a background unlimited colours project.</h1>
+    <h2> It is the type of Asynchrounns Javascript</h2>
+
+    <button id="str">Start</button>
+    <button id="stp">Stop</button>
+
+    <script src="script.js"></script>
 </body>
-<script>
-
-    // this way tracing full dom elemnt and then add elemnet
-    function addLang(langName) {
-        const li = document.createElement('li');
-        li.innerHTML =`${langName}`
-        document.querySelector('.language').appendChild(li)
-        
-    }
-    addLang("Typescript") 
-
-    // Optimize way to add element in DOM   
-    function addOptiLang(langName) {
-        const li = document.createElement('li')
-        li.appendChild(document.createTextNode(langName))
-        document.querySelector('.language').appendChild(li)
-        
-    }
-    addOptiLang("PHP")
-
-    // Edit method
-
-    const secondLang = document.querySelector("li:nth-child(3)")
-    console.log(secondLang);
-   // secondLang.innerHTML = "Dsa"  in this way we can also edit element but it is not optimize way
-   const newli = document.createElement('li')
-   newli.textContent = "DSA"
-   secondLang.replaceWith(newli)
-
-   // Remove
-   const reLang = document.querySelector("li:last-child")
-   reLang.remove()
-
-</script>
-
-
 </html>
